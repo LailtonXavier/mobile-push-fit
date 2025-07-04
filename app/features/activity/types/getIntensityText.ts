@@ -1,0 +1,1 @@
+export const getDurationLabel = (duration: number) => `${duration * 15} Min`;

@@ -1,59 +1,58 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Slot, SplashScreen } from 'expo-router';
+import "../global.css";
+import { ThemeProvider } from './shared/providers/ThemeProvider';
+import { useEffect, useState } from 'react';
+import { useFonts, Exo_400Regular, Exo_700Bold, Exo_600SemiBold, Exo_500Medium } from '@expo-google-fonts/exo';
 
-import { useColorScheme } from '@/components/useColorScheme';
+import { useAuthStore } from './core/infra/store/useAuthStore';
+import Toast from 'react-native-toast-message';
+import { toastConfig } from './core/components/toastConfig';
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from 'expo-router';
-
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
+export default function Layout() {
+  const loadUserFromToken = useAuthStore((state) => state.loadUserFromToken);
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  const [fontsLoaded] = useFonts({
+    Exo_400Regular,
+    Exo_500Medium,
+    Exo_700Bold,
+    Exo_600SemiBold,
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
-    if (error) throw error;
-  }, [error]);
+    async function prepare() {
+      try {
+        await loadUserFromToken();
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
+      }
+    }
+
+    prepare();
+  }, []);
 
   useEffect(() => {
-    if (loaded) {
+    if (appIsReady && fontsLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [appIsReady, fontsLoaded]);
 
-  if (!loaded) {
+  if (!appIsReady || !fontsLoaded) {
     return null;
   }
 
-  return <RootLayoutNav />;
-}
-
-function RootLayoutNav() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <Slot />
+        <Toast config={toastConfig} />
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }

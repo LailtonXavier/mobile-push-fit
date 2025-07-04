@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Customizações específicas */
+.bg-input-light {
+  @apply bg-gray-100;
+}
+.bg-input-dark {
+  @apply bg-gray-800;
+}
+.border-border-light {
+  @apply border-gray-200;
+}
+.border-border-dark {
+  @apply border-gray-700;
+}
