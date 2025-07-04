@@ -4,6 +4,7 @@ import { ChatIcon } from '@assets/icons/ChatIcon';
 import { HomeIcon } from '@assets/icons/HomeIcon';
 import { SettingsIcon } from '@assets/icons/SettingsIcon';
 import { Tabs } from 'expo-router';
+import { Platform } from 'react-native';
 
 export default function TabLayout() {
   const { colors } = useTheme();
@@ -13,14 +14,15 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: colors.text,
         tabBarInactiveTintColor: colors.text,
-        tabBarStyle: {  
+        tabBarStyle: {
           backgroundColor: colors.primary,
-          borderTopWidth: 0,
+          paddingTop: 5,
+          height: 80,
         },
       }}
     >
-      <Tabs.Screen name="chat" options={createTabOptions('Chat', ChatIcon)} />
       <Tabs.Screen name="index" options={createTabOptions('Home', HomeIcon)} />
+      <Tabs.Screen name="chat" options={createTabOptions('Chat', ChatIcon)} />
       <Tabs.Screen name="profile" options={createTabOptions('Configurações', SettingsIcon)} />
     </Tabs>
   );

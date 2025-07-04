@@ -16,7 +16,7 @@ const PageTitle = ({title, back = false, hasIcon = true, className}: PageTitlePr
   const {colors} = useTheme()
 
   const handleBack = () => {
-    router.push('/(tabs)');
+    router.push('/(tabs)/');
   };
 
   return (

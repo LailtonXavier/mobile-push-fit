@@ -4,6 +4,14 @@ Este é o aplicativo mobile desenvolvido com **React Native**, seguindo os princ
 
 ---
 
+## 🖼️ Screenshots
+
+### Página de Chat
+![Chat Screen](./assets/images/projectPhotos/chatDark.jpeg)
+
+### QR Code para testar o app no Android
+![QR Code](./assets/images/projectPhotos/qr-code-android.jpeg)
+
 ## 🚀 Começando
 
 ### Pré-requisitos

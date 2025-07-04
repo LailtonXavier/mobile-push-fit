@@ -35,6 +35,7 @@ export default function LoginScreen() {
     };
 
     login(paramsLogin);
+    router.push('/(tabs)/');
   };
 
   const handleGoToRegister = () => {

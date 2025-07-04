@@ -7,7 +7,7 @@ export const fetchAI = async (messages: Message[]): Promise<string> => {
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${Constants.expoConfig?.extra?.CHAT_KEY || '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'}`,
+        'Authorization': `Bearer ${Constants.expoConfig?.extra?.CHAT_KEY || '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'}`,
         'Content-Type': 'application/json',
         'HTTP-Referer': 'https://localhost',
         'X-Title': 'PersonalTrainerApp',

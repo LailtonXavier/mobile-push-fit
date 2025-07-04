@@ -13,7 +13,6 @@ export function useLogin() {
       await login(data)
     },
     onSuccess: () => {
-      router.replace('/(tabs)');      
       queryClient.invalidateQueries({ queryKey: ['/users'] })
     },
     onError: () => {
