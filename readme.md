@@ -38,8 +38,8 @@ Este é o aplicativo mobile desenvolvido com **React Native**, seguindo os princ
 1. **Clonar o projeto**:
 
    ```bash
-   git clone https://github.com/seu-usuario/push-fit-app.git
-   cd push-fit-app
+   git@github.com:LailtonXavier/mobile-push-fit.git
+   cd mobile-push-fit
    ```
 
 2. **Instalar dependências**:
