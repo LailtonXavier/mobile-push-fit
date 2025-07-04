@@ -6,11 +6,24 @@ Este é o aplicativo mobile desenvolvido com **React Native**, seguindo os princ
 
 ## 🖼️ Screenshots
 
-### Página de Chat
-![Chat Screen](./assets/images/projectPhotos/chatDark.jpeg)
+### Páginas do app tema Light e Dark
+<p align="center">
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/home.jpeg" alt="home" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/allActivities.jpeg" alt="activities" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/modalActivity.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/chat.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/chat2.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/profile.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/modalDeleleOrEdit.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/toastSucess.jpeg" alt="Chat" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/chatDark.jpeg" alt="home" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/profileDark.jpeg" alt="activities" width="100" />
+  <img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/ThemeDark.jpeg" alt="Chat" width="100" />
+</p>
+
 
 ### QR Code para testar o app no Android
-![QR Code](./assets/images/projectPhotos/qr-code-android.jpeg)
+<img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/qr-code-android.jpeg" alt="Chat" width="200" />
 
 ## 🚀 Começando
 
