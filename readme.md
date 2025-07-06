@@ -23,7 +23,7 @@ Este é o aplicativo mobile desenvolvido com **React Native**, seguindo os princ
 
 
 ### QR Code para testar o app no Android e IOs
-<img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/qr-code.jpeg" alt="Chat" width="200" />
+<img src="https://raw.githubusercontent.com/LailtonXavier/mobile-push-fit/refs/heads/master/assets/projectPhotos/qr-code-app.jpeg" alt="Chat" width="200" />
 
 ## 🚀 Começando
 
