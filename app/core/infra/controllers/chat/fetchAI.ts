@@ -1,0 +1,1 @@
+export { openAI as fetchAI } from './typeAI/openAI';
